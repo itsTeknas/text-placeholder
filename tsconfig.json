@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "text-placeholder": [
+        "dist/text-placeholder"
+      ],
+      "text-placeholder/*": [
+        "dist/text-placeholder/*"
+      ]
+    }
   }
 }
