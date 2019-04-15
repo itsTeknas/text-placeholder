@@ -32,5 +32,18 @@
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
+  },
+  "main": "bundles/ngx-text-placeholder.umd.js",
+  "module": "fesm5/ngx-text-placeholder.js",
+  "es2015": "fesm2015/ngx-text-placeholder.js",
+  "esm5": "esm5/ngx-text-placeholder.js",
+  "esm2015": "esm2015/ngx-text-placeholder.js",
+  "fesm5": "fesm5/ngx-text-placeholder.js",
+  "fesm2015": "fesm2015/ngx-text-placeholder.js",
+  "typings": "ngx-text-placeholder.d.ts",
+  "metadata": "ngx-text-placeholder.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
   }
 }

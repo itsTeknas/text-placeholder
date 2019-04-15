@@ -1,24 +1,32 @@
-# TextPlaceholder
+# Text Placeholder
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+An angular directive that shows a Text Placeholder when the image src is absent or fails to load
 
-## Code scaffolding
+- tiny ~88kb
+- uses renderer2, will work in serverside rendering
+- computes a two lettered text given a name or string
+- will generate a placeholder if the image link is broken or empty
 
-Run `ng generate component component-name --project text-placeholder` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project text-placeholder`.
-> Note: Don't forget to add `--project text-placeholder` or else it will be added to the default project in your `angular.json` file. 
+## Installation
 
-## Build
+npm install --save ngx-text-placeholder
 
-Run `ng build text-placeholder` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage 
 
-## Publishing
+### import
+import { TextPlaceholderDirective } from 'ngx-text-placeholder';
 
-After building your library with `ng build text-placeholder`, go to the dist folder `cd dist/text-placeholder` and run `npm publish`.
+``` javascript
+@NgModule({
+  declarations: [
+    ...
+    TextPlaceholderDirective
+  ],
+  ...
+})
+```
 
-## Running unit tests
-
-Run `ng test text-placeholder` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### template usage
+``` html
+<img [textPlaceholder]="'Sanket Berde'" [size]="45" alt="Angular Logo" imgSrc="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.pngs">
+```

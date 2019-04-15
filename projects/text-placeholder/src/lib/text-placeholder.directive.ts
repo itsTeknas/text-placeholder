@@ -66,7 +66,7 @@ export class TextPlaceholderDirective implements AfterViewInit {
     '#455a64',
     '#37474f',
     '#263238'
-  ]
+  ];
 
   @Input()
   imgSrc: string;
