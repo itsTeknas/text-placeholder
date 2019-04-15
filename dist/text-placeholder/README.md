@@ -8,7 +8,7 @@ An angular directive that shows a Text Placeholder when the image src is absent 
 - will generate a placeholder if the image link is broken or empty
 
 ## Preview
-![Preview](https://github.com/itsTeknas/text-placeholder/blob/master/placeholder.png)
+![Preview](https://raw.githubusercontent.com/itsTeknas/text-placeholder/master/placeholder.png)
 
 ## Installation
 
