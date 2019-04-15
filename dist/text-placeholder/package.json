@@ -1,6 +1,6 @@
 {
   "name": "ngx-text-placeholder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "contributors": [
     {
       "email": "sanket@blackcurrantapps.com",
@@ -12,6 +12,10 @@
       "email": "shubham@blackcurrantapps.com"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsTeknas/text-placeholder.git"
+  },
   "author": {
     "email": "sanket@blackcurrantapps.com",
     "name": "Sanket Berde",
