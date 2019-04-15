@@ -12,12 +12,12 @@ An angular directive that shows a Text Placeholder when the image src is absent 
 
 ## Installation
 
-npm install --save ngx-text-placeholder
+`npm install --save ngx-text-placeholder`
 
 ## Usage 
 
 ### import
-import { TextPlaceholderDirective } from 'ngx-text-placeholder';
+`import { TextPlaceholderDirective } from 'ngx-text-placeholder';`
 
 ``` javascript
 @NgModule({
