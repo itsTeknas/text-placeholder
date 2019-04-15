@@ -93,7 +93,6 @@ var TextPlaceholderDirective = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        console.log(this.element, this.imgSrc, this.textPlaceholder);
         if (this.imgSrc) {
             this.element.nativeElement.src = this.imgSrc;
         }
@@ -130,8 +129,7 @@ var TextPlaceholderDirective = /** @class */ (function () {
         child.style.color = 'white';
         child.style['text-align'] = 'center';
         child.style['font-size'] = (this.size / 2.5) + 'px';
-        child.style['font-family'] = 'verdana';
-        console.log(child);
+        child.style['font-family'] = 'Arial, Helvetica, sans-serif';
         /** @type {?} */
         var parent = this.renderer.parentNode(this.element.nativeElement);
         this.renderer.removeChild(parent, this.element.nativeElement);
