@@ -7,6 +7,9 @@ An angular directive that shows a Text Placeholder when the image src is absent 
 - computes a two lettered text given a name or string
 - will generate a placeholder if the image link is broken or empty
 
+## Preview
+![Preview](placeholder.png)
+
 ## Installation
 
 npm install --save ngx-text-placeholder
