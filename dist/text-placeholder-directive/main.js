@@ -121,6 +121,7 @@ var TextPlaceholderDirective = /** @class */ (function () {
         /** @type {?} */
         var child = this.renderer.createElement('p');
         child.innerHTML = this.generatePlaceholder(this.textPlaceholder);
+        child.style.display = 'inline-block';
         child.style.width = this.size + 'px';
         child.style.height = this.size + 'px';
         child.style['border-radius'] = '50%';
@@ -153,7 +154,14 @@ var TextPlaceholderDirective = /** @class */ (function () {
             return (parts[0][0] + parts[1][0]).toUpperCase();
         }
         else {
-            return (parts[0][0] + parts[0][1]).toUpperCase();
+            if (parts[0].length >= 2) {
+                // two characters
+                return (parts[0][0] + parts[0][1]).toUpperCase();
+            }
+            else {
+                // single character
+                return parts[0][0];
+            }
         }
     };
     /**
