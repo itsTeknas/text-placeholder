@@ -2,9 +2,8 @@
 
 An angular directive that shows a Text Placeholder when the image src is absent or fails to load
 
-- tiny ~88kb
 - uses renderer2, will work in serverside rendering
-- computes a two lettered text given a name or string
+- computes a two lettered text given a name or string from the image alt property
 - will generate a placeholder if the image link is broken or empty
 
 ## Preview
@@ -31,5 +30,5 @@ An angular directive that shows a Text Placeholder when the image src is absent 
 
 ### template usage
 ``` html
-<img [textPlaceholder]="'Sanket Berde'" [size]="45" alt="Angular Logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.pngs">
+<img textPlaceholder alt="Angular Logo" src="https://via.placeholder.com/160" [size]="45" (loadError)="this.onLoadError($event)">
 ```

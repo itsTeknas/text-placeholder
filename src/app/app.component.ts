@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'text-placeholder-directive';
+
+  onLoadError($event) {
+    console.log(`Error loading image: `, $event);
+  }
 }

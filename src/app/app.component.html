@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <img [textPlaceholder]="'Sanket Berde'" width="300" alt="Angular Logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
-  <img [textPlaceholder]="'Shubham Chaudhari'" width="300" alt="Angular Logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.pngs">
-  <img [textPlaceholder]="'Raj Desai'" width="300" alt="Angular Logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.pngs">
-  <img [textPlaceholder]="'Sharda Patel'" width="300" alt="Angular Logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.pngs">
+  <img textPlaceholder (loadError)="this.onLoadError($event)" alt="Working" src="https://via.placeholder.com/100">
+  <img textPlaceholder (loadError)="this.onLoadError($event)" alt="Error in Link" src="https://via.placeholder.comm/100">
+  <img textPlaceholder (loadError)="this.onLoadError($event)" alt="No src">
+  <!-- No alt -->
+  <img textPlaceholder (loadError)="this.onLoadError($event)" src="https://via.placeholder.com/100">
+  <!-- No alt with no src -->
+  <img textPlaceholder (loadError)="this.onLoadError($event)" >
 </div>
 <router-outlet></router-outlet>

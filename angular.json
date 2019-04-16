@@ -139,7 +139,7 @@
       "root": "projects/text-placeholder",
       "sourceRoot": "projects/text-placeholder/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "text",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

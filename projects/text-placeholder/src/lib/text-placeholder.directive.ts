@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, AfterViewInit, Renderer2, HostListener } from '@angular/core';
+import { Directive, Input, ElementRef, AfterViewInit, Renderer2, HostListener, Output, EventEmitter } from '@angular/core';
 
 @Directive({
   selector: '[textPlaceholder]'
@@ -69,10 +69,12 @@ export class TextPlaceholderDirective implements AfterViewInit {
   ];
 
   @Input()
-  textPlaceholder: string;
-
-  @Input()
   size = 45;
+
+  @Output()
+  loadError: EventEmitter<any> = new EventEmitter<any>();
+
+  private textPlaceholder: string;
 
   constructor(
     private element: ElementRef,
@@ -81,9 +83,11 @@ export class TextPlaceholderDirective implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.textPlaceholder = this.element.nativeElement.alt || 'Image Placeholder';
     const imgSrc = this.element.nativeElement.src;
     if (!imgSrc) {
       this.applyPlaceholder();
+      this.loadError.next("Empty src");
     }
   }
 
@@ -127,6 +131,7 @@ export class TextPlaceholderDirective implements AfterViewInit {
   @HostListener('error')
   onError(event) {
     this.applyPlaceholder();
+    this.loadError.next(event);
   }
 }
 
