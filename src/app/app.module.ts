@@ -1,18 +1,18 @@
+import { TextPlaceholderModule } from './../../projects/text-placeholder/src/lib/text-placeholder.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TextPlaceholderDirective } from 'text-placeholder';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TextPlaceholderDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TextPlaceholderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

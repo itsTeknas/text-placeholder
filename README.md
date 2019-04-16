@@ -16,13 +16,13 @@ An angular directive that shows a Text Placeholder when the image src is absent 
 ## Usage 
 
 ### import
-`import { TextPlaceholderDirective } from 'ngx-text-placeholder';`
+`import { TextPlaceholderModule } from 'ngx-text-placeholder';`
 
 ``` javascript
 @NgModule({
-  declarations: [
-    ...
-    TextPlaceholderDirective
+  ...
+  imports: [
+    TextPlaceholderModule
   ],
   ...
 })
